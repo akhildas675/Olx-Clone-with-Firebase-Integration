@@ -8,8 +8,11 @@ import Login from "./Pages/Login";
 import { AuthContext, FirebaseContext } from "./store/Context";
 import Create from "./Components/Create/Create";
 import { PostContextProvider } from "./store/PostContext";
-import View from "./Components/View/View";
+
 import ViewPost from "./Pages/ViewPost";
+import CreatePage from "./Pages/CreatePage";
+import LoginPage from "./Pages/Login";
+import SignupPage from "./Pages/Signup";
 
 const App = () => {
   const { setUser } = useContext(AuthContext);
@@ -30,9 +33,9 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/create" element={<Create />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/create" element={<CreatePage/>} />
           <Route path="/view/:productId" element={<ViewPost/>} />
         </Routes>
       </Router>

@@ -6,7 +6,7 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { PostContext } from "../../store/PostContext";
 import { useNavigate } from "react-router-dom";
 
-// Reusable Card Component
+
 const ProductCard = ({ product, setPostDetails, navigate }) => (
   <div
     className="card"
@@ -96,7 +96,7 @@ const Posts = () => {
         ) : (
           <div className="cards">
             {products.length > 0 ? (
-              products.slice(0, 3).map((product) => ( // Show top 3 recent products
+              products.slice(0, 5).map((product) => ( 
                 <ProductCard
                   key={product.id}
                   product={product}

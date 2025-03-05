@@ -60,7 +60,7 @@ const Header = () => {
                 {user && (
                     <span onClick={handleLogout} className="logout">Logout</span>
                 )}
-                {/* Updated Sell Button with Link to /create */}
+               
                 <Link to="/create" className="sellMenu">
                     <SellButton />
                     <div className="sellMenuContent">

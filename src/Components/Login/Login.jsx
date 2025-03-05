@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../../store/Context";
 import Logo from "../../../assets/images/olx-logo.png";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom"; // Corrected from useHistory
+import { useNavigate } from "react-router-dom"; 
 
 import "./Login.css";
 
@@ -10,14 +10,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { auth } = useContext(FirebaseContext);
-  const navigate = useNavigate(); // useNavigate replaces useHistory
+  const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Logged in successfully");
-      navigate("/"); // Redirect to home
+      navigate("/");
     } catch (error) {
       alert(error.message);
     }

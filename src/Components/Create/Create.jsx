@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 import "./Create.css";
 import Header from "../Header/Header";
 import { AuthContext } from "../../store/Context";
@@ -8,9 +8,8 @@ import { collection, addDoc } from "firebase/firestore";
 import uploadImageToCloudinary from "../../utils/uploadToCloudinary";
 
 const Create = () => {
-  const { user } = useContext(AuthContext); // Get user authentication state
-  const navigate = useNavigate(); // Initialize navigation
-
+  const { user } = useContext(AuthContext); 
+  const navigate = useNavigate(); 
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");

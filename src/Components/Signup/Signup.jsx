@@ -24,7 +24,7 @@ const Signup = () => {
 
       // Store user details in Firestore
       await setDoc(doc(db, "users", user.uid), {
-        uid: user.uid, // Optional, since document ID is uid
+        uid: user.uid, 
         name: userName,
         email: email,
         phone: phone,
@@ -37,7 +37,7 @@ const Signup = () => {
     }
   };
 
-  // ... rest of your form JSX remains the same
+
   return (
     <div>
       <div className="signupParentDiv">

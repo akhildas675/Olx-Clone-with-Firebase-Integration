@@ -2,11 +2,9 @@ import React, { useEffect, useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./Pages/Home";
-import Signup from "./Pages/Signup";
-import Login from "./Pages/Login";
 
 import { AuthContext, FirebaseContext } from "./store/Context";
-import Create from "./Components/Create/Create";
+
 import { PostContextProvider } from "./store/PostContext";
 
 import ViewPost from "./Pages/ViewPost";
